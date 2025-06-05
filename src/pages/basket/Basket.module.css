@@ -47,13 +47,13 @@
 
 .tableContainer table {
     width: 100%;
-    text-align: left;
+    text-align: center;
     border-collapse: collapse;
 }
 
 .thead {
     font-weight: bold;
-    text-align: left;
+    text-align: center;
 }
 
 .thead th {

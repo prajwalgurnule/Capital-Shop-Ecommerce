@@ -5,8 +5,6 @@ import { useNavigate } from 'react-router-dom';
 import { MdDelete } from "react-icons/md";
 import { GoPlus } from "react-icons/go";
 import { FiMinus } from "react-icons/fi";
-import { style } from 'framer-motion/client';
-
 import {
     Table,
     Thead,
@@ -53,7 +51,11 @@ function Basket() {
             const updatedQuantites = {...prev}; 
             delete updatedQuantites[id]; 
             return updatedQuantites; 
-        }) 
+        });
+
+        // Dispatch event to update header counts
+        const event = new Event('countChanged');
+        window.dispatchEvent(event);
     }
 
     const updateBasketInLocalStorage = (id, newQty) => {
@@ -62,6 +64,10 @@ function Basket() {
         );
         localStorage.setItem("basket", JSON.stringify(updatedBasket));
         setBasketArr(updatedBasket);
+
+        // Dispatch event to update header counts
+        const event = new Event('countChanged');
+        window.dispatchEvent(event);
     };
 
     useEffect(() => {
@@ -156,7 +162,6 @@ function Basket() {
                     <Link className={styles.Checkout}><span>Proceed to checkout</span></Link>
                 </div>
             </div> 
-
         </div>
     );
 }
