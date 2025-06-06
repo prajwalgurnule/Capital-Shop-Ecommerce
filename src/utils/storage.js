@@ -1,4 +1,3 @@
-// utils/storage.js
 export const getBasket = () => {
     try {
         return JSON.parse(localStorage.getItem("basket")) || [];
@@ -33,11 +32,19 @@ export const setWishlist = (items) => {
     }
 };
 
-export const getBasketCount = () => {
-    const basket = getBasket();
-    return basket.reduce((sum, item) => sum + (item.count || 1), 0);
+export const getAuth = () => {
+    try {
+        return JSON.parse(localStorage.getItem("auth")) || { isLogin: false, isAdmin: false };
+    } catch (error) {
+        console.error("Error reading auth from localStorage", error);
+        return { isLogin: false, isAdmin: false };
+    }
 };
 
-export const getWishlistCount = () => {
-    return getWishlist().length;
+export const setAuth = (auth) => {
+    try {
+        localStorage.setItem("auth", JSON.stringify(auth));
+    } catch (error) {
+        console.error("Error writing to auth in localStorage", error);
+    }
 };

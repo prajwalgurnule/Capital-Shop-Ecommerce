@@ -1,16 +1,59 @@
+// import "./index.css";
+// import { createBrowserRouter, RouterProvider } from "react-router-dom";
+// import { routes } from "./routers/router";
+// import { createContext, useState } from "react";
+
+// const router = createBrowserRouter(routes);
+
+// export const LoginContext = createContext();
+// function App() {
+//     const [isLogin, setIsLogin] = useState(false);
+//     const [isAdmin, setIsAdmin] = useState(false);
+//     const [isInWishlist, setIsInWishlist] = useState(false);
+//     const [isInCart, setIsInCart] = useState(false);
+
+//     return (
+//         <LoginContext.Provider
+//             value={{
+//                 isLogin,
+//                 setIsLogin,
+//                 isAdmin,
+//                 setIsAdmin,
+//                 isInWishlist,
+//                 setIsInWishlist,
+//                 isInCart,
+//                 setIsInCart,
+//             }}
+//         >
+//             <RouterProvider router={router} />
+//         </LoginContext.Provider>
+//     );
+// }
+// export default App;
+
+// ------
+
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { routes } from "./routers/router";
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
 const router = createBrowserRouter(routes);
 
 export const LoginContext = createContext();
 function App() {
-    const [isLogin, setIsLogin] = useState(false);
-    const [isAdmin, setIsAdmin] = useState(false);
-    const [isInWishlist, setIsInWishlist] = useState(false);
-    const [isInCart, setIsInCart] = useState(false);
+    const [isLogin, setIsLogin] = useState(() => {
+        const storedAuth = localStorage.getItem('auth');
+        return storedAuth ? JSON.parse(storedAuth).isLogin : false;
+    });
+    const [isAdmin, setIsAdmin] = useState(() => {
+        const storedAuth = localStorage.getItem('auth');
+        return storedAuth ? JSON.parse(storedAuth).isAdmin : false;
+    });
+
+    useEffect(() => {
+        localStorage.setItem('auth', JSON.stringify({ isLogin, isAdmin }));
+    }, [isLogin, isAdmin]);
 
     return (
         <LoginContext.Provider
@@ -19,10 +62,6 @@ function App() {
                 setIsLogin,
                 isAdmin,
                 setIsAdmin,
-                isInWishlist,
-                setIsInWishlist,
-                isInCart,
-                setIsInCart,
             }}
         >
             <RouterProvider router={router} />

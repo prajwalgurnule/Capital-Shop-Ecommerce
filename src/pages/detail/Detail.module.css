@@ -94,7 +94,7 @@
     overflow: hidden;
     text-overflow: ellipsis ;
     white-space: nowrap;
-    margin-right: 3rem;
+    margin-right: 1rem;
     font-weight: 500;
     color: #fff;
     font-size: 32px;
@@ -103,7 +103,7 @@
 .price span{
     color: #CEBD9C;
     text-decoration: line-through;
-    font-size: 20px;
+    font-size: 24px;
 }
 .color{
     font-size: 14px;
