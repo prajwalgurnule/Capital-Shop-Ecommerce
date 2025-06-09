@@ -180,6 +180,9 @@ function Header() {
                         <li className={styles.headerItem}>  
                             <Link to="/contact" className={styles.headerLink}>Contact</Link>
                         </li>
+                         <li className={styles.headerItem}>  
+                            <Link to="/blog" className={styles.headerLink}>Blog</Link>
+                        </li>
                     </ul>
                 </div>
                 <div className={styles.right}>
