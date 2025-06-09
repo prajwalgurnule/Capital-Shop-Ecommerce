@@ -175,7 +175,7 @@ const Blog = () => {
                     <span><FiClock /> {featuredPost.readTime}</span>
                     <span><FiUser /> {featuredPost.author}</span>
                   </div>
-                  <Link to={`/blog/${featuredPost.id}`} className={styles.readMoreBtn}>
+                  <Link to={`/blog`} className={styles.readMoreBtn}>
                     Read more <FiArrowRight />
                   </Link>
                 </div>
