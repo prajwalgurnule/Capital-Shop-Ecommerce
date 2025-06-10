@@ -19,8 +19,8 @@ function Logout() {
                     <p>You are already logged in.</p>
                 </div>
                 <div className={styles.logout}>
-                    <Link to="/" className={styles.logoutLink}>Home</Link>
-                    <Link to="/products" className={styles.logoutLink}>Products</Link>
+                    {/* <Link to="/" className={styles.logoutLink}>Home</Link>
+                    <Link to="/products" className={styles.logoutLink}>Products</Link> */}
                     <Link className={styles.logoutLink} onClick={handleLogout} to="/login">Logout</Link>
                 </div>
             </div>
