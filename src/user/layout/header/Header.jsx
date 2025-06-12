@@ -4,9 +4,9 @@ import { LuUser2 } from "react-icons/lu";
 import { SlBasket } from "react-icons/sl";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { Link, useLocation } from 'react-router-dom';
-import { LoginContext } from '../../../../App';
-import logo from "../../../../images/logo.png";
-import { getBasket, getWishlist } from '../../../../utils/storage';
+import { LoginContext } from '../../../App';
+import logo from "../../../images/logo.png";
+import { getBasket, getWishlist } from '../../../utils/storage';
 import Tooltip from '../../components/Tooltip';
 import styles from "./Header.module.css";
 
@@ -69,31 +69,29 @@ function Header() {
                     <Link to='/'><img src={logo} alt="" /></Link>
                 </div>
                 <div className={styles.middle}>
-                    <ul className={styles.header}>
-                        <li className={styles.headerItem}>  
-                            <Link to="/" className={`${styles.headerLink} ${isActivePath('/') ? styles.activeLink : ''}`}>Home</Link>
+                    <ul className={styles.navList}>
+                        <li className={styles.navItem}>  
+                            <Link to="/" className={`${styles.navLink} ${isActivePath('/') ? styles.activeLink : ''}`}>Home</Link>
                         </li>
-                        <li className={styles.headerItem}>  
-                            <Link to="/products" className={`${styles.headerLink} ${isActivePath('/products') ? styles.activeLink : ''}`}>All Products</Link>
+                        <li className={styles.navItem}>  
+                            <Link to="/products" className={`${styles.navLink} ${isActivePath('/products') ? styles.activeLink : ''}`}>All Products</Link>
                         </li>
-                        <li className={styles.headerItem}>  
-                            <Link to="/products?category=men's clothing" className={styles.headerLink}>Men</Link>
+                        <li className={styles.navItem}>  
+                            <Link to="/products?category=men's clothing" className={`${styles.navLink} ${location.search.includes("men's clothing") ? styles.activeLink : ''}`}>Men</Link>
                         </li>
-                        <li className={styles.headerItem}>  
-                            <Link to="/products?category=women's clothing" className={styles.headerLink}>Women</Link>
+                        <li className={styles.navItem}>  
+                            <Link to="/products?category=women's clothing" className={`${styles.navLink} ${location.search.includes("women's clothing") ? styles.activeLink : ''}`}>Women</Link>
                         </li>
-                        <li className={styles.headerItem}>
+                        <li className={styles.navItem}>
                             <div className={styles.badgeWrapper}>
-                                <Link to="/products?category=baby's clothing" className={styles.headerLink}>
+                                <Link to="/products?category=baby's clothing" className={`${styles.navLink} ${location.search.includes("baby's clothing") ? styles.activeLink : ''}`}>
                                     Baby Collection
                                 </Link>
                                 <span className={styles.newBadge}>New</span>
                             </div>
                         </li>
-                        <li className={styles.headerItem} ref={pagesRef}>
-                            <button
-                                className={`${styles.headerLink} ${isPagesOpen ? styles.activeLink : ''}`}
-                                onClick={() => setIsPagesOpen(!isPagesOpen)}
+                        <li className={styles.navItem} ref={pagesRef}>
+                            <button className={`${styles.navLink}`} onClick={() => setIsPagesOpen(!isPagesOpen)}
                             >
                                 Pages {isPagesOpen ? <FiChevronUp className={styles.chevron} /> : <FiChevronDown className={styles.chevron} />}
                             </button>
@@ -112,6 +110,13 @@ function Header() {
                                         onClick={() => setIsPagesOpen(false)}
                                     >
                                         FAQ
+                                    </Link>
+                                    <Link
+                                        to="/privacy"
+                                        className={`${styles.dropdownItem} ${isActivePath('/privacy') ? styles.activeDropdownItem : ''}`}
+                                        onClick={() => setIsPagesOpen(false)}
+                                    >
+                                        Privacy
                                     </Link>
                                     {!isLogin && (
                                         <>
@@ -166,11 +171,11 @@ function Header() {
                                 </div>
                             )}
                         </li>
-                        <li className={styles.headerItem}>  
-                            <Link to="/contact" className={`${styles.headerLink} ${isActivePath('/contact') ? styles.activeLink : ''}`}>Contact</Link>
+                        <li className={styles.navItem}>  
+                            <Link to="/contact" className={`${styles.navLink} ${isActivePath('/contact') ? styles.activeLink : ''}`}>Contact</Link>
                         </li>
-                        <li className={styles.headerItem}>  
-                            <Link to="/blog" className={`${styles.headerLink} ${isActivePath('/blog') ? styles.activeLink : ''}`}>Blog</Link>
+                        <li className={styles.navItem}>  
+                            <Link to="/blog" className={`${styles.navLink} ${isActivePath('/blog') ? styles.activeLink : ''}`}>Blog</Link>
                         </li>
                     </ul>
                 </div>

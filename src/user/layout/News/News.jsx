@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from "./News.module.css"
-import {news} from "../../../../middleware/data/Data"; 
+import {news} from "../../../middleware/data/Data"; 
 import Blog from '../../components/Blog';
 
 

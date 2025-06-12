@@ -4,8 +4,8 @@ import { IoIosHeartEmpty, IoIosHeart } from "react-icons/io";
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState, useContext } from "react";
-import { getBasket, setBasket, getWishlist, setWishlist } from '../../../utils/storage';
-import { LoginContext } from '../../../App';
+import { getBasket, setBasket, getWishlist, setWishlist } from '../../utils/storage';
+import { LoginContext } from '../../App';
 
 function Card({ name, price, withoutDiscount, img, id, products }) {
     const [isInWishlist, setIsInWishlist] = useState(false);

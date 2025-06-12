@@ -18,13 +18,13 @@ function Navbar() {
                             <Link to="/about" className={styles.navLink}  >About Us</Link>
                         </li>
                         <li className={styles.navItem}>
-                            <Link to="/"  className={styles.navLink} >Privacy</Link>
+                            <Link to="/privacy"  className={styles.navLink} >Privacy</Link>
                         </li>
                         <li className={styles.navItem}>
                             <Link to="/faq" className={styles.navLink} >FAQ</Link>
                         </li>
                         <li className={styles.navItem}>
-                            <Link to="/" className={styles.navLink}  >Careers</Link>
+                            <Link to="/contact" className={styles.navLink}  >Contact</Link>
                         </li>
                     </ul>
                 </div>

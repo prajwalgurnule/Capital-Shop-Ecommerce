@@ -251,9 +251,13 @@ function Detail() {
                                     <h3>{product.name.charAt(0).toUpperCase() + product.name.slice(1)}</h3>
                                 </div>
                                 <div className={styles.color}>
-                                    <p>Category: {product.category.charAt(0).toUpperCase() + product.category.slice(1)}</p>
+                                    <span>Category: {product.category.charAt(0).toUpperCase() + product.category.slice(1)}</span>
+                                </div>
+                                <div className={styles.color}>
                                     <span>Color: {product.color.charAt(0).toUpperCase() + product.color.slice(1)}</span>
-                                    <p>Size: {product.size.charAt(0).toUpperCase() + product.size.slice(1)}</p>
+                                </div>
+                                <div className={styles.color}>
+                                    <span>Size: {product.size.charAt(0).toUpperCase() + product.size.slice(1)}</span>
                                 </div>
                                 <div className={styles.price}> 
                                     <h1>${product.price}</h1>

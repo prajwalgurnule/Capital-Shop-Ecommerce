@@ -6,3 +6,9 @@
     box-sizing: border-box;
     font-family: Jost, sans-serif
 }
+
+/* Global CSS (not module CSS) */
+*:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}

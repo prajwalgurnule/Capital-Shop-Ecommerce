@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Products.module.css';
 import { Link, useLocation, useSearchParams } from 'react-router-dom';
-import Card from '../user/components/Card';
+import Card from '../../user/components/Card';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { getAllproducts } from "./../../middleware/products"; 
 

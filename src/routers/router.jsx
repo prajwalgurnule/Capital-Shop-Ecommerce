@@ -8,13 +8,14 @@ import Logout from "../pages/logout/Logout";
 import Nopage from "../pages/nopage/Nopage";
 import Products from "../pages/products/Products";
 import Register from "../pages/register/Register";
-import UserRoot from "../pages/user/userRoot";
+import UserRoot from "../user/userRoot";
 import Wishlist from "../pages/wishlist/Wishlist";
 import ProtectedRoute from "./ProtectedRoute";
 import About from "../pages/about/About";
 import FAQ from "../pages/faq/FAQ";
 import Orders from "../pages/orders/Orders";
 import Profile from "../pages/profile/Profile";
+import Privacy from "../pages/Privacy/Privacy";
 
 export const routes = [
     {
@@ -36,6 +37,10 @@ export const routes = [
             {
                 path: "/faq",
                 element: <FAQ />
+            },
+            {
+                path: "/privacy",
+                element: <Privacy />
             },
             {
                 path: "/products", 

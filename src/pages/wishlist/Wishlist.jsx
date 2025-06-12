@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from "./Wishlist.module.css";
 import { Link } from 'react-router-dom'; 
-import Card from "../user/components/Card"; 
+import Card from "../../user/components/Card"; 
 
 function Wishlist() {
     const [wishlistArr, setWishlistArr] = useState([]);

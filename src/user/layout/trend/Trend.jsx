@@ -8,8 +8,8 @@ import { FaChevronRight } from "react-icons/fa";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
-import { testimonials } from '../../../../middleware/data/Data';
-import {getAllproducts} from "../../../../middleware/products"
+import { testimonials } from '../../../middleware/data/Data';
+import {getAllproducts} from "../../../middleware/products"
 
 const CustomLeftArrow = ({ onClick }) => {
     return (
