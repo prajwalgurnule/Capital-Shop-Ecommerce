@@ -1,0 +1,166 @@
+.container {
+  width: 100%;
+  font-family: 'Jost', sans-serif;
+  color: #333;
+}
+
+.header {
+  width: 100%;
+  background-color: #f3ebd8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 150px;
+}
+
+.header h1 {
+  color: #292621;
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.link {
+  color: #74706B;
+  font-size: 14px;
+  text-transform: capitalize;
+  line-height: 1;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 0 .5rem;
+  border: none;
+}
+
+.hr {
+  width: 1px;
+  height: 20px;
+  font-weight: 600;
+  border: none;
+  border-left: 1px solid #74706B;
+  transform: rotate(0deg);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.faqContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #292621;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: #FF2020;
+}
+
+.faqList {
+  margin-bottom: 40px;
+}
+
+.faqItem {
+  margin-bottom: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.faqQuestion {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: #292621;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.faqQuestion:hover {
+  background: #f9f9f9;
+}
+
+.faqQuestion.active {
+  background: #f9f9f9;
+  color: #FF2020;
+}
+
+.faqAnswer {
+  padding: 0 20px 20px;
+  background: #fff;
+  color: #6d6d6d;
+  line-height: 1.6;
+}
+
+.contactPrompt {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.contactPrompt h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #292621;
+}
+
+.contactPrompt p {
+  color: #6d6d6d;
+  margin-bottom: 20px;
+}
+
+.contactButton {
+  display: inline-block;
+  background: #FF2020;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.contactButton:hover {
+  background: #e61a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 32, 32, 0.2);
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 28px;
+  }
+  
+  .faqQuestion {
+    font-size: 15px;
+    padding: 15px;
+  }
+}

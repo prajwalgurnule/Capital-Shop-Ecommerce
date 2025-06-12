@@ -15,13 +15,13 @@ function Navbar() {
                 <div className={styles.left}>
                     <ul className={styles.nav}>
                         <li className={styles.navItem}>
-                            <Link to="/" className={styles.navLink}  >About Us</Link>
+                            <Link to="/about" className={styles.navLink}  >About Us</Link>
                         </li>
                         <li className={styles.navItem}>
                             <Link to="/"  className={styles.navLink} >Privacy</Link>
                         </li>
                         <li className={styles.navItem}>
-                            <Link to="/" className={styles.navLink} >FAQ</Link>
+                            <Link to="/faq" className={styles.navLink} >FAQ</Link>
                         </li>
                         <li className={styles.navItem}>
                             <Link to="/" className={styles.navLink}  >Careers</Link>
@@ -36,7 +36,7 @@ function Navbar() {
                         <Link className={styles.navLink} to='/wishlist'>My Wishlist</Link>
                     </div>
                     <div className={styles.order}>
-                        <Link className={styles.navLink}>Track Your Order</Link>
+                        <Link className={styles.navLink} to='/orders'>Track Your Order</Link>
                     </div>
                     <div className={styles.social}>
                         <FaFacebook className={styles.Social}/>

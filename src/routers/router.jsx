@@ -11,6 +11,10 @@ import Register from "../pages/register/Register";
 import UserRoot from "../pages/user/userRoot";
 import Wishlist from "../pages/wishlist/Wishlist";
 import ProtectedRoute from "./ProtectedRoute";
+import About from "../pages/about/About";
+import FAQ from "../pages/faq/FAQ";
+import Orders from "../pages/orders/Orders";
+import Profile from "../pages/profile/Profile";
 
 export const routes = [
     {
@@ -22,8 +26,16 @@ export const routes = [
                 element: <Home />
             },
             {
+                path: "/about",
+                element: <About />
+            },
+            {
                 path: "/contact",
                 element: <Contact />
+            },
+            {
+                path: "/faq",
+                element: <FAQ />
             },
             {
                 path: "/products", 
@@ -54,6 +66,22 @@ export const routes = [
                 element: (
                     <ProtectedRoute>
                         <Basket />
+                    </ProtectedRoute>
+                )  
+            },
+            {
+                path: "/orders",
+                element: (
+                    <ProtectedRoute>
+                        <Orders />
+                    </ProtectedRoute>
+                )  
+            },
+            {
+                path: "/profile",
+                element: (
+                    <ProtectedRoute>
+                        <Profile />
                     </ProtectedRoute>
                 )  
             },
